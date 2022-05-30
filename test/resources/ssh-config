@@ -1,0 +1,20 @@
+Host backup-put
+  User bu
+  Hostname bupstashserver
+  IdentitiesOnly yes
+  IdentityFile /test/putsshkey
+  StrictHostKeyChecking no
+
+Host backup-get
+  User bu
+  Hostname bupstashserver
+  IdentitiesOnly yes
+  IdentityFile /test/getsshkey
+  StrictHostKeyChecking no
+
+Host backup-list
+  User bu
+  Hostname bupstashserver
+  IdentitiesOnly yes
+  IdentityFile /test/listsshkey
+  StrictHostKeyChecking no

@@ -1,0 +1,19 @@
+services:
+  sut:
+    build: "."
+    volumes:
+      - "./test/resources:/test"
+    entrypoint: "/test/run_tests.sh"
+    depends_on:
+      - bupstashserver
+
+  bupstashserver:
+    build: "."
+    volumes:
+      - "./backup:/backup"
+    configs:
+      - authorized_keys
+
+configs:
+  authorized_keys:
+    file: ./test/authorized_keys
