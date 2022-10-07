@@ -1,5 +1,11 @@
 # Bupstash docker image
 
+This image uses two levels of access control:
+
+- Bupstash encryption keys for encrypting and decrypting the actual data.
+- ssh keys for determining what bupstash commands you are able to run. You might for want some ssh keys to only be able to append data to the repo and not read or delete data.
+
+
 ## ssh
 
 This docker image exposes an ssh server with one user called `bu` on it. Add an authorized_keys file for this user in `conf/authorized_keys`
@@ -26,6 +32,7 @@ bupstash new-sub-key -k backup-master.key -o backup-list.key --list
 bupstash new-sub-key -k backup-master.key -o backup-put.key --put
 ```
 
+
 ## Client
 
 On a client that wants to push backups, add its ssh key to authorized_keys as above and do something like:
@@ -34,6 +41,7 @@ On a client that wants to push backups, add its ssh key to authorized_keys as ab
 export BUPSTASH_REPOSITORY=ssh://bu@172.18.0.2/backup/repo
 bupstash put --key backup-put.key stuff
 ```
+
 
 ## How to run tests
 
