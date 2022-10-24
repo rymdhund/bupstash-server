@@ -9,8 +9,6 @@ services:
 
   bupstashserver:
     build: "."
-    volumes:
-      - "./backup:/backup"
     configs:
       - authorized_keys
 

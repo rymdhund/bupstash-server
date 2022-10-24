@@ -1,3 +1,10 @@
+Host backup-any
+  User bu
+  Hostname bupstashserver
+  IdentitiesOnly yes
+  IdentityFile /test/mastersshkey
+  StrictHostKeyChecking no
+
 Host backup-put
   User bu
   Hostname bupstashserver

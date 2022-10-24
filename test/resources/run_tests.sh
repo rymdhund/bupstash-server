@@ -16,6 +16,9 @@ echo "abc" > /tmp/stuff/file.txt
 
 # test backup
 
+# init repo
+bupstash init -r ssh://backup-any/backup/repo
+
 # Backup our file
 id=$(bupstash put -r ssh://backup-put/backup/repo --key /tmp/backup-put.key /tmp/stuff)
 

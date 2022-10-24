@@ -1,3 +1,4 @@
+command="/bupstash-any.sh",restrict ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOOoQwIj2gj0KNOMXVhoJTri1yN8M2WB9n6cuJqfsue+ mastersshkey
 command="/bupstash-append.sh",restrict ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHdhTSvrL9vGbi6GNuBuZ6Y0GPdfsbART/cJO+ukc72s putsshkey
 command="/bupstash-get.sh",restrict ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKtvqaF1/4wYA6b1rXdd1kwNm3np3IlUllbrRzMoWWey getsshkey
 command="/bupstash-list.sh",restrict ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAPpiiVH174icmlMvdMfapqYJ/7qEKGoQoCN1eVF8c0M listsshkey

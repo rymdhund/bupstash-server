@@ -13,11 +13,12 @@ This docker image exposes an ssh server with one user called `bu` on it. Add an 
 For example:
 
 ```
+command="/bupstash-any.sh",restrict ssh-ed25519 AAAA...bgT masterkey
 command="/bupstash-append.sh",restrict ssh-ed25519 AAAA...n/l putkey
 command="/bupstash-get.sh",restrict ssh-ed25519 AAAA...owL getkey
 ```
 
-The first key will only be allowed to append to the repo and the second key will only be allowed to get from the repo, for example for syncing.
+The first key will be allowed to run any command, the second key will only be allowed to append to the repo and the third key will only be allowed to get from the repo, for example for syncing.
 
 
 ## Bupstash Keys
@@ -39,6 +40,7 @@ On a client that wants to push backups, add its ssh key to authorized_keys as ab
 
 ```
 export BUPSTASH_REPOSITORY=ssh://bu@172.18.0.2/backup/repo
+bupstash init
 bupstash put --key backup-put.key stuff
 ```
 
